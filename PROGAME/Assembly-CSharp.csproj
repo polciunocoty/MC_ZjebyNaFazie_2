@@ -53,18 +53,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\DestroyBullet.cs" />
+     <Compile Include="Assets\Energy_PickUp.cs" />
      <Compile Include="Assets\Movement.cs" />
+     <Compile Include="Assets\shooting.cs" />
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie/PROGAME/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie_2/PROGAME/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie/PROGAME/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie_2/PROGAME/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie/PROGAME/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie_2/PROGAME/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie/PROGAME/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>C:/Users/Ababu/Documents/GitHub/MC_ZjebyNaFazie_2/PROGAME/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>D:/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

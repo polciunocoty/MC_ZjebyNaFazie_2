@@ -15,11 +15,21 @@ public class Movement : MonoBehaviour
     float _falling=1f;
     float _rising=2f;
 
+    public int _energy;
+    float _timer;
+    public int _timerResetXD;
+    public int _moveValue;
+    public int _jumpValue;
+    public bool[] _podniesioneItemki = new bool[3];
+    public int i = 0;
     // Use this for initialization
     void Start()
     {
+        _energy = 100;
+        _timer = _timerResetXD;
         _baseSpeed = _speed;
         _rigid = this.GetComponent<Rigidbody>();
+
 
     }
 
@@ -29,7 +39,13 @@ public class Movement : MonoBehaviour
 
         Move();
         Jump();
-       
+        Die();
+
+        if (_timer <= 0) 
+        {
+            _energy -=_moveValue;
+            _timer = _timerResetXD;
+        }
 
     }
 
@@ -38,10 +54,12 @@ public class Movement : MonoBehaviour
 
         if (Input.GetKey(KeyCode.D))
         {
+            _timer -= Time.deltaTime;
             this.gameObject.transform.position += new Vector3(0, 0, 1 * _speed);
         }
         if (Input.GetKey(KeyCode.A))
         {
+            _timer -= Time.deltaTime;
             this.gameObject.transform.position += new Vector3(0, 0, 1 * -_speed);
         }
 
@@ -57,6 +75,8 @@ public class Movement : MonoBehaviour
                
                 if (Input.GetKeyDown(KeyCode.W))
                 {
+                    _energy = _energy - _jumpValue;
+
                     _rigid.velocity = new Vector3(0, 1 * _jumpSpeed, 0) ;
                 }
                
@@ -81,6 +101,14 @@ public class Movement : MonoBehaviour
             
         
 
+    }
+
+    void Die()
+    {
+        if (_energy <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 }
